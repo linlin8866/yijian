@@ -3564,4 +3564,10 @@ EOF
   "outbounds": [
     {
       "tag": "${tag}",
-      "protocol": "
+      "protocol": "vmess",
+      # 这里省略了中间的 JSON 配置...
+    }
+  ]
+}
+EOF
+    fi
