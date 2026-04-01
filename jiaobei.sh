@@ -3565,7 +3565,35 @@ EOF
     {
       "tag": "${tag}",
       "protocol": "vmess",
-      # 这里省略了中间的 JSON 配置...
+      "settings": {
+        "vnext": [
+          {
+            "address": "${addr}",
+            "port": ${port},
+            "users": [
+              {
+                "id": "${uuid}",
+                "alterId": 0,
+                "security": "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "${net}",
+        "security": "${tls}",
+        "wsSettings": {
+          "path": "${path}",
+          "headers": {
+            "Host": "${host}"
+          }
+        },
+        "tlsSettings": {
+          "serverName": "${host}",
+          "allowInsecure": false
+        }
+      }
     }
   ]
 }
